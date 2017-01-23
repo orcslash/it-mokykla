@@ -1,0 +1,45 @@
+#boxes {
+  height: 50px;
+  margin: 0 auto;
+}
+
+#boxes div {
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 9.5%;
+  background: #8a9404;
+  max-width: 100px;
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  -o-transition: all .15s linear;
+}
+
+.jump {
+  -webkit-animation: jump 4s;
+}
+
+.flip {
+  -webkit-animation: flip 4s;
+}
+
+
+@-webkit-keyframes jump {
+	0% { -webkit-transform: translateY(0); }
+	7% { -webkit-transform: translateY(-50px) scale(0.7); }
+	50% { -webkit-transform: translateY(2000px) scale(0.7);
+		  opacity: 1; }
+	51% { opacity: 0; }
+	52% { -webkit-transform: translateY(-2000px);
+		  opacity: 0; }
+	90% { -webkit-transform: translateY(-100px);
+		  opacity: 1; }
+	100% { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes flip {
+	0% { -webkit-transform: rotateY(0) translateY(0px) scale(1.5);
+		 box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+		 z-index: 100; }
+	50% { -webkit-transform: rotateY(2000deg) translateY(2000px); }
+}
