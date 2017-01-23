@@ -11,4 +11,13 @@ $(document).ready(function() {
       $(box).removeClass(animation);
     }, 4000);
   });
+
+  $('#singlebutton').on('click', function() {
+    var email = $('#email').val();
+    /* THIS CODE WILL BE RUN EVERY TIME ON BUTTON CLICK */
+
+    if (email.indexOf('@') > -1) {
+      $('.success').show();
+    }
+  });
 });
