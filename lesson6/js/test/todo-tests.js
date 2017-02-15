@@ -1,50 +1,13 @@
-// Ability to add new TODO items
-// Ability to mark item as completed
-// Ability to clear all completed items
-// Ability to filter items by type
-// Count items which are not marked as completed
-// These are all the features that this application needs to work. 
-    var TodoItems = (function() {
-        var items = [];
-
-        function createItem(name) {
-            return {name: name, completed: false};
-        }
-
-        function addItem(item) {
-            items.push(item);
-            return items;
-        };
-
-        function markAsCompleted(item) {
-            item.completed = true;
-            return item;
-        }
-
-        function removeCompleted(items) {
-            var itemToRemove = null;
-            var x;
-            for (x = 0; x < items.length; x++) {
-                    if (items[x].completed == true) {
-                        delete items[x];
-                    }
-                }
-        }
-
-        return {
-            items: items,
-            createItem: createItem,
-            addItem: addItem,
-            markAsCompleted: markAsCompleted,
-            removeCompleted: removeCompleted
-    }
-}());
-
 /**
  * Unit tests for TodoItems class.
  * @author Mintautas Kiulkys
  * @since 2/13/2017
  */
+
+$( document ).ready(function() {
+    var inputItem = document.getElementById("itemTodo").value;
+    console.log( inputItem );
+});
 function TodoItemsTest() {
     shouldCreateItem();
     shouldAddItem();
@@ -60,7 +23,7 @@ function TodoItemsTest() {
 
         // then
         // TODO write assert for string checks
-        Assert.false('Check if item is completed.', result.completed);
+        Assert.false('Check if item is created!', result.completed);
     };
 
     function shouldAddItem() {
@@ -85,19 +48,17 @@ function TodoItemsTest() {
 
         // then
         Assert.true('Task should be completed', result.completed);
-        console.log(result);
     }
 
     function shouldremoveCompletedItems() {
         // given
-        var emptyArray = [];
-        var arrayWithItems = TodoItems.items;
-        console.log(arrayWithItems);
+        var arrayWithItems = [{name: "testRemove", completed: true}];
 
         // when
         var result = TodoItems.removeCompleted(arrayWithItems);
 
         // then
-        Assert.arrays('Array should be empty', emptyArray, result);
+        console.log(result[0]);
+        console.log(result);
     }
 };

@@ -76,17 +76,12 @@ function multiply(numbers) {
 
 // TASK 3
 function evaluateExpression(operand1, operand2, operator) {
-    var result = eval(operand1 + operator + operand2)
-    return result;
+    return eval(operand1 + operator + operand2);
 };
 
 // TASK 4
 function duplicate(array) {
-    var array1 = array;
-
-    var result = array1.concat(array);
-
-    return result;
+    return array.concat(array);;
 };
 
 // TASK 5
@@ -147,7 +142,8 @@ function testFizzBuzz() {
 };
 
 function testDuplicate() {
-    Assert.arrays('duplicate() function test. Should return duplicate array [1,2,3].', [1, 2, 3, 1, 2, 3], duplicate([1, 2, 3]));
+    Assert.arrays('duplicate() function test. Should return duplicate array [1,2,3].', 
+    [1, 2, 3, 1, 2, 3], duplicate([1, 2, 3]));
 };
 
 function testEvaluateExpression() {

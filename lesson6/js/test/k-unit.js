@@ -27,9 +27,6 @@ if (Assert === undefined) {
          * @param actual Array value returned from function that neets to be asserted.
          */
         arrays: function assert(message, expected, actual) {
-            if (expected === actual) {
-                console.log('Failed! Arrays are not the same!');
-            }
     
             if (expected.length != actual.length) {
                 console.log('Failed! Given arrays lengths are not the same!');
@@ -43,19 +40,7 @@ if (Assert === undefined) {
     
             console.log(message);
             console.log('Passed! Result is ' + actual + '.');
-        },
-        /**
-         * Checks if boolean is true.
-         * @param message Informative message about what was tested, function name can be provided.
-         * @param boolean True or false statement.
-         */
-        true: function assert(message, boolean) {
-            if (boolean === true) {
-                console.log(message);
-                console.log('Passed! Result is ' + boolean + '.');
-            } else {
-                console.log('Failed! Result was ' + boolean);
-            };
+            console.log('\n');
         },
 
         /**
@@ -67,8 +52,10 @@ if (Assert === undefined) {
             if (boolean === true) {
                 console.log(message);
                 console.log('Passed! Result is ' + boolean + '.');
+                console.log('\n');
             } else {
                 console.log('Failed! Result was ' + boolean);
+                console.log('\n');
             };
         },
 
@@ -81,8 +68,10 @@ if (Assert === undefined) {
             if (boolean === false) {
                 console.log(message);
                 console.log('Passed! Result is ' + boolean + '.');
+                console.log('\n');
             } else {
                 console.log('Failed! Result was ' + boolean);
+                console.log('\n');
             };
         }
     };
