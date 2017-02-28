@@ -3,7 +3,7 @@
 
 <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 
@@ -13,18 +13,31 @@
 
 <body>
 
-    <h2>Lesson 6</h2>
+  <h2>Lesson 6</h2>
 
-    <form>
-	  
-	  Item Todo <input type="text" id="itemTodo"><br>
+  <script>
 
-<input type="button" onclick="TodoItems.addItem()" value="asdad">
+  </script>
 
-    </form>
-  
+  <form id="addItemForm">
+
+    Item Todo <input type="text" id="itemTodo"><br>
+
+    <input type="button" onclick="TodoItems.addItem();" value="Add Item" required="true">
+    </br>
+    <input type="button" onclick="TodoItems.removeCompleted();" value="Remove Completed">
+
+
+
+    <div id="itemList">
+      <ul id="unorderedList">
+      </ul>
+
+    </div>
+  </form>
   <footer></footer>
 
 </body>
- <script src="./js/main/todo.js" type="text/javascript"></script>
+<script src="./js/main/todo.js" type="text/javascript"></script>
+
 </html>
