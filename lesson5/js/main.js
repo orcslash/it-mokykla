@@ -81,7 +81,7 @@ function evaluateExpression(operand1, operand2, operator) {
 
 // TASK 4
 function duplicate(array) {
-    return array.concat(array);;
+    return array.concat(array);
 };
 
 // TASK 5
