@@ -51,10 +51,10 @@ var farenheitToCelsius = function (farenheit) {
 
 /**
  * Takes given string and returns it reversed.
- * @param {String} words to reverse.
+ * @param {String} string to reverse.
  * @returns {String} reversed string that was given.
  */
-var reverse = function (words) {
-    for (var i = words.length - 1, reversed = ''; i >= 0; reversed += words[i--]);
+var reverse = function (string) {
+    for (var i = string.length - 1, reversed = ''; i >= 0; reversed += string[i--]);
     return reversed;
 }
