@@ -76,7 +76,7 @@ if (Assert === undefined) {
         },
 
         /**
-         * Checks if both arrays are equal.
+         * Checks if both strings are equal.
          * @param {String} message about what was tested, function name can be provided.
          * @param {String} expected string that was returned from called function.
          * @param {String} actual string that result need to be equal to.
